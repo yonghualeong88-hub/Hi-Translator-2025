@@ -4,6 +4,11 @@ import fs from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
+// 扩展 NextApiRequest 类型以包含 formidable 的 files 属性
+interface ExtendedNextApiRequest extends NextApiRequest {
+  files?: formidable.Files;
+}
+
 // Next.js 自动加载环境变量，无需手动配置
 
 // 禁用Next.js默认的bodyParser，让我们手动处理multipart数据
@@ -105,7 +110,7 @@ function convertToWhisperLanguageCode(langCode: string): string {
   return mapping[langCode] || langCode;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: ExtendedNextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
