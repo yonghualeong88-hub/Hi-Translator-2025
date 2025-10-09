@@ -1,0 +1,92 @@
+import { useTheme } from '@/contexts/ThemeContext';
+import { useI18n } from '@/contexts/I18nContext';
+import { Tabs } from 'expo-router';
+import { BookOpen, Camera, Mic, Type } from 'lucide-react-native';
+import { Text } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+export default function TabLayout() {
+  const { colors } = useTheme();
+  const { t } = useI18n();
+  const insets = useSafeAreaInsets();
+
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textSecondary,
+        tabBarHideOnKeyboard: true,
+        tabBarStyle: {
+          backgroundColor: colors.surface,
+          borderTopWidth: 1,
+          borderTopColor: colors.border,
+          height: 60 + insets.bottom + 10,
+          paddingBottom: insets.bottom + 16,
+          paddingTop: 6,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          elevation: 8,
+          shadowColor: colors.shadow,
+          shadowOffset: {
+            width: 0,
+            height: -2,
+          },
+          shadowOpacity: 0.1,
+          shadowRadius: 4,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: '500',
+        },
+      }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color, fontSize: 12, fontWeight: '500' }}>{t('tabs.voice', '语音')}</Text>
+          ),
+          tabBarIcon: ({ size, color }) => (
+            <Mic size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="text"
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color, fontSize: 12, fontWeight: '500' }}>{t('tabs.text', '文本')}</Text>
+          ),
+          tabBarIcon: ({ size, color }) => (
+            <Type size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="phrases"
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color, fontSize: 12, fontWeight: '500' }}>{t('tabs.phrases', '短语')}</Text>
+          ),
+          tabBarIcon: ({ size, color }) => (
+            <BookOpen size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="camera"
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color, fontSize: 12, fontWeight: '500' }}>{t('tabs.camera', '相机')}</Text>
+          ),
+          tabBarIcon: ({ size, color }) => (
+            <Camera size={size} color={color} />
+          ),
+          tabBarStyle: { display: 'none' },
+        }}
+      />
+    </Tabs>
+  );
+}

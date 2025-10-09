@@ -1,0 +1,144 @@
+// HLTransslater 应用配置常量
+
+// 应用信息
+export const APP_CONFIG = {
+  NAME: 'HLTransslater',
+  VERSION: '1.0.0',
+  DESCRIPTION: '智能多语言语音翻译应用',
+  AUTHOR: 'HLTransslater Team',
+  WEBSITE: 'https://hltransslater.com',
+  SUPPORT_EMAIL: 'support@hltransslater.com',
+} as const;
+
+// 功能开关
+export const FEATURE_FLAGS = {
+  ENABLE_VOICE_TRANSLATION: true,
+  ENABLE_TEXT_TRANSLATION: true,
+  ENABLE_DUAL_VOICE_MODE: true,
+  ENABLE_HISTORY_SAVE: true,
+  ENABLE_OFFLINE_MODE: false,
+  ENABLE_DATA_EXPORT: true,
+  ENABLE_ANALYTICS: false,
+  ENABLE_CRASH_REPORTING: false,
+  ENABLE_USAGE_STATISTICS: false,
+} as const;
+
+// 翻译引擎配置
+export const TRANSLATION_CONFIG = {
+  DEFAULT_ENGINE: 'google',
+  FALLBACK_ENGINE: 'local',
+  MAX_RETRY_ATTEMPTS: 3,
+  REQUEST_TIMEOUT: 10000, // 10秒
+  CACHE_DURATION: 24 * 60 * 60 * 1000, // 24小时
+} as const;
+
+// 音频配置
+export const AUDIO_CONFIG = {
+  QUALITY: 'high',
+  MAX_RECORDING_DURATION: 60, // 秒
+  AUTO_PLAY_TRANSLATION: true,
+  SAMPLE_RATE: 44100,
+  CHANNELS: 1,
+  BIT_RATE: 128000,
+} as const;
+
+// 存储配置
+export const STORAGE_CONFIG = {
+  MAX_HISTORY_ITEMS: 1000,
+  HISTORY_RETENTION_DAYS: 30,
+  MAX_FAVORITES: 100,
+  CACHE_SIZE_LIMIT: 50 * 1024 * 1024, // 50MB
+} as const;
+
+// UI配置
+export const UI_CONFIG = {
+  ANIMATION_DURATION: 300,
+  DEBOUNCE_DELAY: 500,
+  TOAST_DURATION: 3000,
+  LOADING_TIMEOUT: 10000,
+  MAX_TEXT_LENGTH: 5000,
+  MIN_TEXT_LENGTH: 1,
+} as const;
+
+// 网络配置
+export const NETWORK_CONFIG = {
+  TIMEOUT: 15000,
+  RETRY_ATTEMPTS: 3,
+  RETRY_DELAY: 1000,
+  OFFLINE_CHECK_INTERVAL: 30000,
+} as const;
+
+// 隐私配置
+export const PRIVACY_CONFIG = {
+  DATA_RETENTION_DAYS: 30,
+  AUTO_DELETE_OLD_DATA: true,
+  ENCRYPT_SENSITIVE_DATA: true,
+  ALLOW_DATA_COLLECTION: false,
+} as const;
+
+// 错误配置
+export const ERROR_CONFIG = {
+  SHOW_ERROR_DETAILS: __DEV__,
+  LOG_ERRORS: true,
+  REPORT_CRASHES: false,
+  MAX_ERROR_LOG_SIZE: 100,
+} as const;
+
+// 开发配置
+export const DEV_CONFIG = {
+  ENABLE_DEBUG_LOGS: __DEV__,
+  ENABLE_PERFORMANCE_MONITORING: __DEV__,
+  MOCK_API_RESPONSES: __DEV__,
+  ENABLE_HOT_RELOAD: __DEV__,
+} as const;
+
+// 主题配置
+export const THEME_CONFIG = {
+  DEFAULT_THEME: 'auto',
+  ANIMATION_ENABLED: true,
+  REDUCED_MOTION: false,
+  HIGH_CONTRAST: false,
+} as const;
+
+// 语言检测配置
+export const LANGUAGE_DETECTION_CONFIG = {
+  MIN_CONFIDENCE: 0.7,
+  MIN_TEXT_LENGTH: 3,
+  MAX_TEXT_LENGTH: 1000,
+  ENABLE_AUTO_DETECTION: true,
+  FALLBACK_LANGUAGE: 'en',
+} as const;
+
+// 性能配置
+export const PERFORMANCE_CONFIG = {
+  ENABLE_LAZY_LOADING: true,
+  ENABLE_IMAGE_OPTIMIZATION: true,
+  ENABLE_BUNDLE_SPLITTING: true,
+  MAX_CONCURRENT_REQUESTS: 5,
+} as const;
+
+// 安全配置
+export const SECURITY_CONFIG = {
+  ENABLE_SSL_PINNING: false,
+  ENABLE_CERTIFICATE_VALIDATION: true,
+  SANITIZE_USER_INPUT: true,
+  MAX_REQUEST_SIZE: 1024 * 1024, // 1MB
+} as const;
+
+// 导出所有配置
+export const CONFIG = {
+  APP: APP_CONFIG,
+  FEATURES: FEATURE_FLAGS,
+  TRANSLATION: TRANSLATION_CONFIG,
+  AUDIO: AUDIO_CONFIG,
+  STORAGE: STORAGE_CONFIG,
+  UI: UI_CONFIG,
+  NETWORK: NETWORK_CONFIG,
+  PRIVACY: PRIVACY_CONFIG,
+  ERROR: ERROR_CONFIG,
+  DEV: DEV_CONFIG,
+  THEME: THEME_CONFIG,
+  LANGUAGE_DETECTION: LANGUAGE_DETECTION_CONFIG,
+  PERFORMANCE: PERFORMANCE_CONFIG,
+  SECURITY: SECURITY_CONFIG,
+} as const;

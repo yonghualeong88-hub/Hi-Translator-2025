@@ -1,0 +1,26 @@
+{
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "java.import.gradle.enabled": false,
+  "java.import.gradle.wrapper.enabled": false,
+  "java.import.gradle.java.home": null,
+  "java.import.gradle.offline.enabled": false,
+  "java.import.gradle.arguments": "",
+  "java.import.gradle.jvmArguments": "",
+  "java.import.gradle.user.home": null,
+  "java.import.gradle.java.home": null,
+  "files.exclude": {
+    "**/node_modules/**/.settings": true,
+    "**/node_modules/**/.classpath": true,
+    "**/node_modules/**/.project": true,
+    "**/node_modules/**/bin": true,
+    "**/node_modules/**/build": true
+  },
+  "search.exclude": {
+    "**/node_modules/**/.settings": true,
+    "**/node_modules/**/.classpath": true,
+    "**/node_modules/**/.project": true,
+    "**/node_modules/**/bin": true,
+    "**/node_modules/**/build": true
+  }
+}

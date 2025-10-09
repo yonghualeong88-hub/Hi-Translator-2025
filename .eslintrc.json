@@ -1,0 +1,40 @@
+{
+  "extends": ["expo", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "max-lines": ["warn", 300],
+    "max-lines-per-function": ["warn", 50],
+    "react/jsx-no-bind": "warn",
+    "no-console": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-process-env": "off",
+    "no-hardcoded-credentials": "error",
+    "react-native/no-inline-styles": "error"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

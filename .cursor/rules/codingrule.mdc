@@ -1,0 +1,33 @@
+# Project rules for Cursor (Expo + React Native + Native Modules)
+project_type: expo-react-native
+
+rules:
+  - Always follow Expo project structure:
+      - JS/TS code in `app/` or `src/`
+      - Config plugins in `plugins/`
+      - Native modules in `android/` and `ios/`
+  - Do not break Expo Managed Workflow unless explicitly asked.
+  - Prefer TypeScript (.ts/.tsx) over JavaScript.
+  - Use functional React components with hooks.
+  - When modifying native code:
+      - Android: Kotlin (not Java).
+      - iOS: Swift (not Objective-C).
+      - Register modules using standard React Native patterns.
+  - When adding Config Plugin:
+      - Place under `plugins/` folder.
+      - Use `withDangerousMod` only if absolutely necessary.
+      - Expose plugin entry in `app.json` or `app.config.js`.
+  - When adding TTS or voice related code:
+      - Expose system voices via Native Module.
+      - JS must import voices with `NativeModules.TTSVoices`.
+      - Do not rely on `pitch`/`rate` alone for gender switching.
+  - When updating UI:
+      - Use React Native Paper or Expo components if available.
+      - Always keep styles in `StyleSheet.create` or Tailwind classNames.
+  - When writing async functions:
+      - Use `try/catch` with proper error messages.
+      - Never leave dangling promises.
+  - Ensure cross-platform (iOS + Android) compatibility for all APIs.
+  - Keep the build working with Expo Prebuild (`expo prebuild` should succeed).
+alwaysApply: true
+---

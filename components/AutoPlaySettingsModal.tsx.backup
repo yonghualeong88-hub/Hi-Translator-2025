@@ -1,0 +1,428 @@
+import { useTheme } from '@/contexts/ThemeContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Info, Languages, User, UserCheck, Volume2, X } from 'lucide-react-native';
+import React, { useEffect, useState } from 'react';
+import {
+  Alert,
+  Modal,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+interface AutoPlaySettingsModalProps {
+  visible: boolean;
+  onClose: () => void;
+  autoPlayVoiceTranslation: boolean;
+  setAutoPlayVoiceTranslation: (enabled: boolean) => void;
+  autoPlayTextTranslation: boolean;
+  setAutoPlayTextTranslation: (enabled: boolean) => void;
+}
+
+export default function AutoPlaySettingsModal({
+  visible,
+  onClose,
+  autoPlayVoiceTranslation,
+  setAutoPlayVoiceTranslation,
+  autoPlayTextTranslation,
+  setAutoPlayTextTranslation,
+}: AutoPlaySettingsModalProps) {
+  const { colors } = useTheme();
+  const [selectedVoice, setSelectedVoice] = useState<string | null>(null);
+  const [selectedGender, setSelectedGender] = useState<'male' | 'female' | null>(null);
+
+  // 加载保存的语音选择
+  useEffect(() => {
+    if (visible) {
+      loadSelectedVoice();
+    }
+  }, [visible]);
+
+  const loadSelectedVoice = async () => {
+    try {
+      const savedVoiceId = await AsyncStorage.getItem('selectedVoiceId');
+      if (savedVoiceId) {
+        setSelectedVoice(savedVoiceId);
+        // 根据语音代号确定性别
+        if (savedVoiceId.toLowerCase().includes('zh-cn-language')) {
+          setSelectedGender('male');
+        } else if (savedVoiceId.toLowerCase().includes('cmn-tw-x-ctc-local')) {
+          setSelectedGender('female');
+        }
+      }
+    } catch (error) {
+      console.error('❌ 加载保存的语音失败:', error);
+    }
+  };
+
+  const handleGenderSelect = async (gender: 'male' | 'female') => {
+    try {
+      setSelectedGender(gender);
+      
+      // 根据性别选择对应的语音代号
+      const voiceId = gender === 'male' ? 'zh-cn-language' : 'cmn-tw-x-ctc-local';
+      setSelectedVoice(voiceId);
+      await AsyncStorage.setItem('selectedVoiceId', voiceId);
+      
+      Alert.alert('语音已选择', `已选择${gender === 'male' ? '男声' : '女声'}语音`);
+    } catch (error) {
+      console.error('❌ 保存语音选择失败:', error);
+      Alert.alert('错误', '保存语音选择失败，请重试');
+    }
+  };
+
+  const showInfo = () => {
+    Alert.alert(
+      '自动播放说明',
+      '• 自动播放语音翻译：语音翻译完成后自动播放翻译结果\n• 自动播放文本翻译：文本翻译完成后自动朗读翻译结果\n• 两个功能可以独立开启或关闭',
+      [{ text: '知道了', style: 'default' }]
+    );
+  };
+
+  // Custom Switch Component
+  const CustomSwitch = ({ value, onValueChange, title, description, icon }: {
+    value: boolean;
+    onValueChange: (newValue: boolean) => void;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+  }) => (
+    <View style={[styles.settingCard, { backgroundColor: colors.surface }]}>
+      <View style={styles.settingHeader}>
+        <View style={[styles.iconContainer, { backgroundColor: colors.primary + '15' }]}>
+          {React.cloneElement(icon as React.ReactElement, { color: colors.primary, size: 24 } as any)}
+        </View>
+        <View style={styles.settingInfo}>
+          <Text style={[styles.settingTitle, { color: colors.text }]}>{title}</Text>
+          <Text style={[styles.settingDescription, { color: colors.textSecondary }]}>
+            {description}
+          </Text>
+        </View>
+        <TouchableOpacity
+          style={[
+            styles.toggleButton,
+            { 
+              backgroundColor: value ? colors.primary : colors.border,
+            }
+          ]}
+          onPress={() => onValueChange(!value)}
+          activeOpacity={0.7}
+        >
+          <View style={[
+            styles.toggleThumb,
+            { 
+              backgroundColor: colors.surface,
+              transform: [{ translateX: value ? 20 : 2 }]
+            }
+          ]} />
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+
+  return (
+    <Modal
+      visible={visible}
+      animationType="slide"
+      presentationStyle="fullScreen"
+      onRequestClose={onClose}
+      statusBarTranslucent={false}
+    >
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top', 'left', 'right', 'bottom']}>
+        {/* Header */}
+        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+          <Text style={[styles.title, { color: colors.text }]}>自动播放设置</Text>
+          <View style={styles.headerActions}>
+            <TouchableOpacity onPress={showInfo} style={styles.infoButton}>
+              <Info size={20} color={colors.textSecondary} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={onClose} style={[styles.closeButton, { backgroundColor: colors.border }]}>
+              <X size={20} color={colors.text} />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Content */}
+        <View style={styles.content}>
+          <CustomSwitch
+            title="自动播放语音翻译"
+            description="语音翻译完成后自动播放翻译结果"
+            icon={<Volume2 />}
+            value={autoPlayVoiceTranslation}
+            onValueChange={setAutoPlayVoiceTranslation}
+          />
+
+          <CustomSwitch
+            title="自动播放文本翻译"
+            description="文本翻译完成后自动朗读翻译结果"
+            icon={<Languages />}
+            value={autoPlayTextTranslation}
+            onValueChange={setAutoPlayTextTranslation}
+          />
+
+          {/* Voice Selection */}
+          <View style={[styles.settingCard, { backgroundColor: colors.surface }]}>
+            <View style={styles.voiceSelectionHeader}>
+              <View style={[styles.iconContainer, { backgroundColor: colors.primary + '15' }]}>
+                <Volume2 size={20} color={colors.primary} />
+              </View>
+              <Text style={[styles.voiceSelectionTitle, { color: colors.text }]}>Preferred translation voice</Text>
+            </View>
+            
+            <View style={styles.voiceOptions}>
+              {/* Male Option */}
+              <TouchableOpacity
+                style={[
+                  styles.genderOption,
+                  { backgroundColor: colors.background },
+                  selectedGender === 'male' && {
+                    backgroundColor: colors.primary + '10',
+                    borderColor: colors.primary,
+                    borderWidth: 1,
+                  }
+                ]}
+                onPress={() => handleGenderSelect('male')}
+                activeOpacity={0.7}
+              >
+                <View style={styles.genderOptionLeft}>
+                  <View style={[styles.genderIcon, { backgroundColor: colors.primary + '15' }]}>
+                    <User size={24} color={colors.primary} />
+                  </View>
+                  <Text style={[styles.genderLabel, { color: colors.text }]}>Male</Text>
+                </View>
+                <View style={[
+                  styles.radioButton,
+                  { borderColor: colors.primary },
+                  selectedGender === 'male' && { backgroundColor: colors.primary }
+                ]}>
+                  {selectedGender === 'male' && (
+                    <View style={[styles.radioButtonInner, { backgroundColor: 'white' }]} />
+                  )}
+                </View>
+              </TouchableOpacity>
+
+              {/* Female Option */}
+              <TouchableOpacity
+                style={[
+                  styles.genderOption,
+                  { backgroundColor: colors.background },
+                  selectedGender === 'female' && {
+                    backgroundColor: colors.primary + '10',
+                    borderColor: colors.primary,
+                    borderWidth: 1,
+                  }
+                ]}
+                onPress={() => handleGenderSelect('female')}
+                activeOpacity={0.7}
+              >
+                <View style={styles.genderOptionLeft}>
+                  <View style={[styles.genderIcon, { backgroundColor: colors.primary + '15' }]}>
+                    <UserCheck size={24} color={colors.primary} />
+                  </View>
+                  <Text style={[styles.genderLabel, { color: colors.text }]}>Female</Text>
+                </View>
+                <View style={[
+                  styles.radioButton,
+                  { borderColor: colors.primary },
+                  selectedGender === 'female' && { backgroundColor: colors.primary }
+                ]}>
+                  {selectedGender === 'female' && (
+                    <View style={[styles.radioButtonInner, { backgroundColor: 'white' }]} />
+                  )}
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Status Info */}
+          <View style={[styles.statusCard, { backgroundColor: colors.card }]}>
+            <Text style={[styles.statusTitle, { color: colors.text }]}>当前状态</Text>
+            <Text style={[styles.statusText, { color: colors.textSecondary }]}>
+              {autoPlayVoiceTranslation && autoPlayTextTranslation 
+                ? '将播放语音翻译和文本翻译结果' 
+                : autoPlayVoiceTranslation 
+                ? '将播放语音翻译结果' 
+                : autoPlayTextTranslation 
+                ? '将朗读文本翻译结果' 
+                : '自动播放已关闭'
+              }
+            </Text>
+          </View>
+        </View>
+      </SafeAreaView>
+
+    </Modal>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    paddingTop: Platform.OS === 'android' ? 40 : 16,
+    borderBottomWidth: 1,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  infoButton: {
+    padding: 5,
+  },
+  closeButton: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  content: {
+    flex: 1,
+    padding: 20,
+  },
+  settingCard: {
+    borderRadius: 12,
+    marginBottom: 15,
+    padding: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  settingHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  iconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 15,
+  },
+  settingInfo: {
+    flex: 1,
+  },
+  settingLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  textContainer: {
+    flex: 1,
+    marginLeft: 12,
+  },
+  voiceSelectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  voiceSelectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 12,
+  },
+  voiceOptions: {
+    gap: 8,
+  },
+  genderOption: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 12,
+    borderRadius: 8,
+    minHeight: 50,
+  },
+  genderOptionLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  genderIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+  },
+  genderLabel: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  radioButton: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  radioButtonInner: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+  },
+  settingTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 5,
+  },
+  settingDescription: {
+    fontSize: 13,
+    lineHeight: 18,
+  },
+  toggleButton: {
+    width: 50,
+    height: 30,
+    borderRadius: 15,
+    justifyContent: 'center',
+    paddingHorizontal: 2,
+  },
+  toggleThumb: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.5,
+    elevation: 1,
+  },
+  statusCard: {
+    borderRadius: 12,
+    padding: 15,
+    marginTop: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  statusTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 5,
+  },
+  statusText: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
+});

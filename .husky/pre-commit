@@ -1,0 +1,45 @@
+#!/bin/sh
+# Pre-commit hook to run quality checks before committing
+echo "🔍 Running pre-commit checks..."
+
+# Run ESLint on TypeScript and TypeScript React files
+echo "📝 Running ESLint checks..."
+npx eslint . --ext .ts,.tsx --max-warnings 0
+
+# Check if ESLint passed
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint checks failed. Please fix the errors before committing."
+  exit 1
+fi
+
+# Run TypeScript type checking
+echo "🔍 Running TypeScript type checks..."
+npx tsc --noEmit
+
+# Check if TypeScript passed
+if [ $? -ne 0 ]; then
+  echo "❌ TypeScript type checks failed. Please fix the errors before committing."
+  exit 1
+fi
+
+# Run security checks
+echo "🔒 Running security checks..."
+node scripts/security-check.js
+
+# Check if security checks passed
+if [ $? -ne 0 ]; then
+  echo "❌ Security checks failed. Please fix the security issues before committing."
+  exit 1
+fi
+
+# Run style checks
+echo "🎨 Running style checks..."
+node scripts/style-check.js
+
+# Check if style checks passed
+if [ $? -ne 0 ]; then
+  echo "❌ Style checks failed. Please fix the style issues before committing."
+  exit 1
+fi
+
+echo "✅ All pre-commit checks passed!"

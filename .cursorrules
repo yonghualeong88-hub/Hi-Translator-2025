@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "security": {
+      "no-hardcoded-api-keys": true,
+      "no-secrets-in-code": true,
+      "require-env-variables": true,
+      "no-console-log-in-prod": true
+    },
+    "style": {
+      "prefer-const": true,
+      "no-var": true,
+      "max-lines-per-file": 300,
+      "max-lines-per-function": 50,
+      "no-inline-styles": true,
+      "require-tailwind-or-stylesheet": true
+    },
+    "quality": {
+      "require-error-handling": true,
+      "require-comments": true
+    },
+    "i18n": {
+      "no-hardcoded-strings": true
+    }
+  }
+}

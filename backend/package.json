@@ -1,0 +1,36 @@
+{
+  "name": "translation-backend",
+  "version": "1.0.0",
+  "description": "Backend API for translation service using OpenAI",
+  "main": "api/translate.ts",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/formidable": "^3.4.5",
+    "dotenv": "^17.2.2",
+    "form-data": "^4.0.4",
+    "formidable": "^3.5.4",
+    "next": "^14.2.33",
+    "openai": "^5.22.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "translation",
+    "openai",
+    "api",
+    "nextjs"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
