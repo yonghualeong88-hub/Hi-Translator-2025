@@ -168,7 +168,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       setTimeout(() => reject(new Error('OpenAI API timeout after 30 seconds')), 30000);
     });
     
-    const transcript = await Promise.race([transcriptPromise, timeoutPromise]);
+    const transcript = await Promise.race([transcriptPromise, timeoutPromise]) as { text: string; language?: string };
 
     const sourceText = transcript.text;
     const detectedLang = transcript.language;
