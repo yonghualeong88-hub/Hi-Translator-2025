@@ -99,7 +99,8 @@ function updateNetworkConfig(newIP) {
     }
   } else {
     // 创建新的环境变量文件
-    const content = `OPENAI_API_KEY=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
+    const content = `# 请在此处添加您的 OPENAI_API_KEY
+# OPENAI_API_KEY=your_api_key_here
 EXPO_PUBLIC_API_URL=http://${newIP}:3001
 EXPO_PUBLIC_DEBUG_MODE=true
 `;
