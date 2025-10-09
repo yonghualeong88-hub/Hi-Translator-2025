@@ -229,7 +229,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       setTimeout(() => reject(new Error('Translation API timeout after 20 seconds')), 20000);
     });
     
-    const translation = await Promise.race([translationPromise, translationTimeoutPromise]);
+    const translation = await Promise.race([translationPromise, translationTimeoutPromise]) as { choices: Array<{ message?: { content?: string } }> };
 
     const translatedText = translation.choices[0]?.message?.content?.trim();
 
