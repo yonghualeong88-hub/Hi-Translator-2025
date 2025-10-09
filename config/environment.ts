@@ -10,23 +10,31 @@ export const getApiBaseUrl = (): string => {
     return apiUrl;
   }
 
-  // 检查是否使用本地IP
-  const useLocalIP = process.env.EXPO_PUBLIC_USE_LOCAL_IP === 'true';
-  const devIP = process.env.EXPO_PUBLIC_DEV_IP || '10.49.143.104';
-  const port = process.env.EXPO_PUBLIC_API_PORT || '3001';
-
-  let finalUrl: string;
-  if (Platform.OS !== 'web') {
-    // 移动端（Android/iOS）自动使用本地IP地址
-    finalUrl = `http://${devIP}:${port}`;
-    console.log('[API Config] Using local IP for mobile device:', finalUrl);
-  } else {
-    // Web端使用localhost
-    finalUrl = `http://localhost:${port}`;
-    console.log('[API Config] Using localhost for web:', finalUrl);
-  }
+  // 检查是否使用本地开发模式
+  const useLocalDev = process.env.EXPO_PUBLIC_USE_LOCAL_DEV === 'true';
   
-  return finalUrl;
+  if (useLocalDev) {
+    // 本地开发模式
+    const devIP = process.env.EXPO_PUBLIC_DEV_IP || '10.49.143.104';
+    const port = process.env.EXPO_PUBLIC_API_PORT || '3001';
+    
+    let finalUrl: string;
+    if (Platform.OS !== 'web') {
+      // 移动端（Android/iOS）自动使用本地IP地址
+      finalUrl = `http://${devIP}:${port}`;
+      console.log('[API Config] Using local IP for mobile device:', finalUrl);
+    } else {
+      // Web端使用localhost
+      finalUrl = `http://localhost:${port}`;
+      console.log('[API Config] Using localhost for web:', finalUrl);
+    }
+    return finalUrl;
+  }
+
+  // 默认使用 Vercel 云端后端
+  const vercelUrl = 'https://hi-translator-2025.vercel.app';
+  console.log('[API Config] Using Vercel cloud backend:', vercelUrl);
+  return vercelUrl;
 };
 
 // API配置

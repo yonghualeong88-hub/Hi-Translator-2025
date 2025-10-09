@@ -8,8 +8,8 @@ export const API_CONFIG = {
   
   // 生产环境
   PRODUCTION: {
-    BASE_URL: "https://your-production-api.com",
-    TIMEOUT: 10000,
+    BASE_URL: "https://hi-translator-2025.vercel.app",
+    TIMEOUT: 30000,
   },
   
   // 本地开发
