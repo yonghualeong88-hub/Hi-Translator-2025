@@ -205,7 +205,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // 2️⃣ 翻译（GPT-4o-mini）
     console.log('🌐 开始翻译...');
     
-    const sourceLangName = LANGUAGE_MAP[detectedLang] || detectedLang;
+    const sourceLangName = LANGUAGE_MAP[detectedLang || sourceLang] || detectedLang || sourceLang;
     const targetLangName = LANGUAGE_MAP[targetLang] || targetLang;
 
     const translationPromise = openai.chat.completions.create({
