@@ -84,7 +84,7 @@ export default function TermsOfService() {
 
             <h3 style={styles.subheading}>4.3 免费试用</h3>
             <p style={styles.paragraph}>
-              新用户可享受 <strong>7 天免费试用</strong>（如适用）。
+              新用户可享受 <strong>3 天免费试用</strong>（如适用）。
               试用期结束前可随时取消，不会产生费用。
               如未取消，试用结束后将自动转为付费订阅。
             </p>
