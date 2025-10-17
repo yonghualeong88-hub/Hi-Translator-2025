@@ -2,17 +2,22 @@ import { ThemeProvider, useTheme } from '@/contexts/ThemeContext';
 import { I18nProvider } from '@/contexts/I18nContext';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'react-native-gesture-handler'; // ⚠️ 必须在最顶部
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import 'react-native-get-random-values';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import '../i18n'; // Initialize i18n
+import CustomSplashScreen from '@/components/CustomSplashScreen';
 
 // Buffer polyfill for docx library
 import { Buffer } from 'buffer';
 global.Buffer = Buffer;
+
+// 阻止自动隐藏 Splash（防止白屏）
+SplashScreen.preventAutoHideAsync();
 
 function AppContent() {
   const { isDark } = useTheme();
@@ -29,6 +34,7 @@ function AppContent() {
 
 export default function RootLayout() {
   useFrameworkReady();
+  const [showCustomSplash, setShowCustomSplash] = useState(true);
 
   // ✅ 修改任务 3: 在 App 启动时初始化离线翻译服务
   useEffect(() => {
@@ -75,20 +81,37 @@ export default function RootLayout() {
         // 再初始化 offlineTranslationService
         await offlineTranslationService.initialize();
         console.log('✅ OfflineTranslationService 初始化完成');
+        
+        // ✅ 所有初始化完成后，隐藏原生 Splash Screen
+        await SplashScreen.hideAsync();
+        console.log('✅ Splash Screen 已隐藏');
+        
+        // 显示自定义启动画面
+        setShowCustomSplash(true);
       } catch (error) {
         console.error('❌ 服务初始化失败:', error);
+        // 即使初始化失败，也要隐藏 Splash
+        await SplashScreen.hideAsync();
       }
     };
     
     initializeServices();
   }, []);
 
+  const handleSplashFinish = () => {
+    setShowCustomSplash(false);
+  };
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <I18nProvider>
           <ThemeProvider>
-            <AppContent />
+            {showCustomSplash ? (
+              <CustomSplashScreen onFinish={handleSplashFinish} />
+            ) : (
+              <AppContent />
+            )}
           </ThemeProvider>
         </I18nProvider>
       </SafeAreaProvider>

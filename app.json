@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Hi Translator",
+    "name": "Speak to Translator",
     "slug": "hltransslater",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,6 +8,11 @@
     "scheme": "hltransslater",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/app_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.hltransslater.app",

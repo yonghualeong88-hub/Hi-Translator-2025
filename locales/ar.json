@@ -1,311 +1,418 @@
 {
   "common": {
-    "loading": "جاري التحميل...",
+    "loading": "تحميل...",
     "error": "خطأ",
-    "success": "نجح",
-    "cancel": "إلغاء",
-    "confirm": "تأكيد",
-    "delete": "حذف",
-    "copy": "نسخ",
-    "play": "تشغيل",
-    "pause": "إيقاف مؤقت",
-    "stop": "توقف",
-    "retry": "إعادة المحاولة",
-    "close": "إغلاق",
-    "save": "حفظ",
-    "back": "رجوع",
+    "success": "نجاح",
+    "cancel": "يلغي",
+    "confirm": "يتأكد",
+    "delete": "يمسح",
+    "copy": "ينسخ",
+    "play": "يلعب",
+    "pause": "يوقف",
+    "stop": "قف",
+    "retry": "أعد المحاولة",
+    "close": "يغلق",
+    "save": "يحفظ",
+    "back": "خلف",
     "tip": "نصيحة",
-    "add": "إضافة",
-    "translate": "ترجمة",
+    "add": "يضيف",
+    "translate": "يترجم",
     "copied": "تم النسخ إلى الحافظة",
-    "copyFailed": "فشل النسخ، يرجى التحقق من إعدادات الأذونات",
-    "shareFailed": "فشل مشاركة نتيجة الترجمة",
-    "clear": "مسح",
-    "usingFallbackTranslation": "استخدام خدمة الترجمة الاحتياطية",
-    "gotIt": "فهمت"
+    "copyFailed": "غير قادر على نسخ النص، يرجى التحقق من إعدادات الأذونات",
+    "shareFailed": "غير قادر على مشاركة نتيجة الترجمة",
+    "clear": "واضح",
+    "clearAll": "مسح الكل",
+    "gotIt": "فهمتها",
+    "create": "يخلق",
+    "usingFallbackTranslation": "استخدام خدمة الترجمة الاحتياطية"
   },
   "voice": {
-    "title": "ترجمة صوتية",
-    "subtitle": "سجل لغتين بشكل منفصل للترجمة المقارنة",
-    "holdToSpeak": "Hold to speak",
-    "recording": "Recording...",
-    "processing": "معالجة...",
-    "translationComplete": "Translation complete",
-    "translationFailed": "Translation failed",
-    "recordingTooShort": "Recording too short, please hold the button and speak",
-    "noVoiceDetected": "لم يتم اكتشاف صوت، تحدث بصوت أعلى أو اقترب من الهاتف",
-    "permissionRequired": "Please enable microphone permission",
-    "permissionDenied": "Microphone permission is required to use voice features",
-    "offlineMode": "وضع عدم الاتصال",
-    "test": "Test",
-    "noSystemVoice": "No system voice detected",
-    "installVoicePack": "يرجى التأكد من تثبيت حزمة الصوت الصينية على الجهاز",
-    "dualVoiceTranslation": "الترجمة الصوتية المزدوجة",
-    "sourceLanguage": "اللغة المصدر",
-    "targetLanguage": "اللغة الهدف",
-    "tapToSpeak": "اضغط للتحدث",
-    "listening": "الاستماع...",
-    "translating": "الترجمة...",
-    "tapToHold": "اضغط مع الاستمرار للتحدث",
-    "releaseToSend": "حرر للإرسال",
-    "swapLanguages": "تبديل اللغات",
-    "recordingInProgress": "التسجيل قيد التقدم...",
-    "holdToRecord": "اضغط مع الاستمرار للتسجيل",
-    "releaseToTranslate": "حرر للترجمة",
-    "checkMicrophonePermissions": "يرجى التحقق من أذونات الميكروفون",
+    "title": "الترجمة الصوتية",
+    "subtitle": "سجل لغتين بشكل منفصل لمقارنة الترجمة",
+    "holdToSpeak": "عقد للتحدث",
+    "recording": "تسجيل...",
+    "processing": "يعالج...",
+    "translationComplete": "اكتملت الترجمة",
+    "translationFailed": "فشلت الترجمة",
+    "recordingTooShort": "التسجيل قصير جدًا، يرجى الضغط باستمرار على الزر والتحدث",
+    "noVoiceDetected": "لم يتم اكتشاف أي صوت، يرجى التحدث بصوت أعلى أو بالقرب من الهاتف",
+    "permissionRequired": "يرجى تمكين إذن الميكروفون",
+    "permissionDenied": "مطلوب إذن الميكروفون لاستخدام الميزات الصوتية",
+    "offlineMode": "وضع غير متصل بالشبكة",
+    "noNetwork": "لا توجد شبكة",
+    "test": "امتحان",
+    "noSystemVoice": "لم يتم اكتشاف صوت النظام",
+    "installVoicePack": "يرجى التأكد من تثبيت حزمة الصوت الصينية",
     "tapToRecord": "اضغط على زر التسجيل السفلي للترجمة",
     "copyPermissionError": "لا يمكن نسخ النص، يرجى التحقق من إعدادات الأذونات",
     "deleteTranslation": "حذف الترجمة",
     "confirmDelete": "هل أنت متأكد أنك تريد حذف سجل الترجمة هذا؟",
-    "original": "الأصل",
-    "translated": "مترجم"
+    "original": "إبداعي",
+    "translated": "مترجم",
+    "offlineNotSupported": "يتطلب التعرف على الصوت شبكة",
+    "pleaseConnectNetwork": "يرجى الاتصال بالشبكة",
+    "offlineVoiceNotSupported": "يتطلب التعرف على الصوت اتصالاً بالشبكة، يرجى التبديل إلى الوضع عبر الإنترنت",
+    "voiceSelected": "تم تحديد الصوت",
+    "selectedMaleVoice": "تم اختيار صوت ذكر",
+    "selectedFemaleVoice": "تم اختيار صوت أنثى",
+    "selectedFallbackVoice": "Selected available voice: {{name}}",
+    "noAvailableVoice": "لم يتم العثور على صوت متاح",
+    "saveVoiceFailed": "فشل حفظ اختيار الصوت، يرجى المحاولة مرة أخرى",
+    "testFailed": "فشل الاختبار",
+    "cannotPlayTest": "لا يمكن تشغيل اختبار الصوت، يرجى التحقق من إعدادات الصوت",
+    "voiceTest": "اختبار الصوت",
+    "playingTestVoice": "Playing test voice: {{name}}"
   },
   "language": {
-    "selectSource": "اختر اللغة المصدر",
-    "selectTarget": "اختر اللغة الهدف",
-    "autoDetect": "Auto Detect",
-    "recent": "المستخدمة مؤخراً",
+    "selectSource": "حدد لغة المصدر",
+    "selectTarget": "حدد اللغة الهدف",
+    "autoDetect": "الكشف التلقائي",
+    "recent": "مؤخرًا",
     "allLanguages": "عرض جميع اللغات",
-    "backToRecent": "رجوع",
-    "english": "الإنجليزية",
+    "backToRecent": "خلف",
+    "english": "إنجليزي",
     "chinese": "الصينية",
     "japanese": "اليابانية",
-    "korean": "الكورية",
-    "french": "الفرنسية",
+    "korean": "كوري",
+    "french": "فرنسي",
     "german": "الألمانية",
-    "spanish": "الإسبانية",
-    "italian": "الإيطالية",
+    "spanish": "الأسبانية",
+    "italian": "ايطالي",
     "portuguese": "البرتغالية",
     "russian": "الروسية",
-    "arabic": "العربية",
+    "arabic": "عربي",
     "thai": "التايلاندية",
     "vietnamese": "الفيتنامية",
-    "turkish": "التركية",
-    "dutch": "الهولندية",
-    "polish": "البولندية",
-    "filipino": "الفلبينية",
+    "turkish": "تركي",
+    "dutch": "هولندي",
+    "polish": "بولندي",
+    "filipino": "فلبينية",
     "hindi": "الهندية"
   },
   "history": {
-    "title": "سجل الترجمة",
-    "subtitle": "View your translation records",
-    "empty": "لا يوجد سجل ترجمة",
-    "emptyDescription": "ابدأ باستخدام ميزات الترجمة الصوتية، ستظهر سجلات الترجمة هنا",
+    "title": "تاريخ الترجمة",
+    "subtitle": "عرض سجلات الترجمة الخاصة بك",
+    "empty": "لا يوجد تاريخ الترجمة",
+    "emptyDescription": "ابدأ باستخدام ميزات الترجمة الصوتية، وستظهر سجلات الترجمة الخاصة بك هنا",
     "deleteConfirm": "هل أنت متأكد أنك تريد حذف سجل الترجمة هذا؟",
     "deleteRecord": "حذف السجل",
     "copied": "تم النسخ إلى الحافظة",
     "copyFailed": "فشل النسخ، يرجى التحقق من إعدادات الأذونات",
-    "daysAgo": "{{count}} أيام مضت",
-    "hoursAgo": "{{count}} ساعات مضت",
-    "minutesAgo": "{{count}} دقائق مضت",
+    "daysAgo": "{{count}} days ago",
+    "hoursAgo": "{{count}} hours ago",
+    "minutesAgo": "{{count}} minutes ago",
     "justNow": "الآن",
-    "gotIt": "فهمت",
+    "gotIt": "فهمتها",
     "detailTitle": "تفاصيل الترجمة",
     "loadError": "غير قادر على تحميل تفاصيل الترجمة",
     "languagePair": "زوج اللغة",
-    "translationTime": "وقت الترجمة"
+    "translationTime": "وقت الترجمة",
+    "exportFormatTXT": "رسالة قصيرة",
+    "exportFormatPDF": "قوات الدفاع الشعبي",
+    "exportFormatWord": "كلمة",
+    "originalAndTranslated": "اصلية + مترجمة"
   },
   "text": {
-    "pleaseEnterText": "Please enter text to translate",
-    "inputTextForTranslation": "Enter text for quick translation",
-    "originalText": "Original Text",
-    "translatedText": "Translated Text",
-    "translationResult": "Translation Result",
-    "translationRecord": "Translation Record",
-    "generatedTime": "Generated Time",
-    "selectExportContent": "Select Export Content",
-    "originalOnly": "Original Only",
-    "translatedOnly": "Translated Only",
-    "originalAndTranslated": "Original + Translated",
-    "shareTranslationRecordPDF": "Share Translation Record PDF",
-    "shareTranslationRecordWord": "Share Translation Record Word Document",
-    "exportFailed": "Failed to export TXT file",
-    "exportPDFFailed": "Failed to export PDF file, please try again",
-    "exportWordFailed": "Failed to export Word file, please try again",
-    "clearTranslationResult": "Clear Translation Result",
-    "clearTranslationConfirm": "Are you sure you want to clear the current translation result? The original text and input box content will be preserved.",
-    "languagePackNotDownloaded": "Language Pack Not Downloaded",
-    "languagePackNotDownloadedMessage": "This language is not available in offline mode.\n\nPlease download the corresponding language pack in settings when you have network.",
-    "offlineMode": "Offline Mode",
-    "offlineTranslationAvailable": "Offline translation enabled"
+    "pleaseEnterText": "الرجاء إدخال النص للترجمة",
+    "inputTextForTranslation": "أدخل النص للترجمة",
+    "originalText": "النص الأصلي",
+    "translatedText": "النص المترجم",
+    "translationResult": "نتيجة الترجمة",
+    "translationRecord": "سجل الترجمة",
+    "generatedTime": "الوقت المولد",
+    "selectExportContent": "حدد تصدير المحتوى",
+    "originalOnly": "الأصلي فقط",
+    "translatedOnly": "مترجمة فقط",
+    "originalAndTranslated": "اصلية + مترجمة",
+    "shareTranslationRecordPDF": "مشاركة سجل الترجمة PDF",
+    "shareTranslationRecordWord": "مشاركة سجل الترجمة في مستند Word",
+    "exportFailed": "فشل تصدير ملف TXT",
+    "exportPDFFailed": "فشل تصدير ملف PDF، يرجى المحاولة مرة أخرى",
+    "exportWordFailed": "فشل تصدير ملف Word، يرجى المحاولة مرة أخرى",
+    "clearTranslationResult": "مسح نتيجة الترجمة",
+    "clearTranslationConfirm": "هل أنت متأكد أنك تريد مسح نتيجة الترجمة الحالية؟سيتم الاحتفاظ بالنص الأصلي ومحتوى مربع الإدخال.",
+    "languagePackNotDownloaded": "لم يتم تنزيل حزمة اللغة",
+    "languagePackNotDownloadedMessage": "هذه اللغة غير متوفرة في وضع عدم الاتصال.\n\nيرجى تنزيل حزمة اللغة المقابلة في الإعدادات عندما يكون لديك شبكة.",
+    "offlineMode": "وضع غير متصل بالشبكة",
+    "noNetwork": "لا توجد شبكة",
+    "offlineTranslationAvailable": "تم تمكين الترجمة دون اتصال بالإنترنت",
+    "scanSuccess": "نجاح المسح",
+    "scanSuccessMessage": "تم استخراج النص، ويمكنك مواصلة التحرير",
+    "scanFailed": "فشل المسح",
+    "noTextDetected": "لم يتم اكتشاف أي نص، يرجى المحاولة مرة أخرى",
+    "scanError": "خطأ في المسح",
+    "scanErrorMessage": "حدث خطأ أثناء المسح، يرجى المحاولة مرة أخرى"
   },
   "tabs": {
-    "voice": "Voice",
-    "text": "Text",
-    "phrases": "Phrases",
-    "camera": "Camera"
+    "voice": "صوت",
+    "text": "نص",
+    "phrases": "عبارات",
+    "camera": "آلة تصوير"
   },
   "camera": {
-    "retake": "Retake",
-    "saving": "Saving",
-    "translatedImage": "Translated Image",
-    "saveOptions": "Save Options",
-    "saveImage": "Save Image",
-    "selectSaveMethod": "Select save method\nPermission request will pop up on first save, please click \"Allow\"",
-    "selectContentType": "Select content type to save",
-    "originalImageOnly": "Original Image Only",
-    "originalImage": "Original Image",
-    "translatedImageOnly": "Translated Image Only",
-    "saveBoth": "Save Both",
-    "shareImage": "Share Image",
-    "permissionDenied": "Permission Denied",
-    "galleryPermissionRequired": "Gallery permission is required to import images",
-    "importFailed": "Import Failed",
-    "importFailedMessage": "Unable to import image, please try again"
+    "retake": "إعادة الالتقاط",
+    "saving": "توفير",
+    "translatedImage": "صورة مترجمة",
+    "saveOptions": "حفظ الخيارات",
+    "saveImage": "حفظ الصورة",
+    "selectSaveMethod": "حدد طريقة الحفظ\nسيظهر طلب الإذن عند الحفظ الأول، يرجى النقر فوق \"السماح\"",
+    "selectContentType": "حدد نوع المحتوى للحفظ",
+    "originalImageOnly": "الصورة الأصلية فقط",
+    "originalImage": "الصورة الأصلية",
+    "translatedImageOnly": "الصورة المترجمة فقط",
+    "saveBoth": "حفظ كليهما",
+    "shareImage": "مشاركة الصورة",
+    "permissionDenied": "تم رفض الإذن",
+    "cameraPermissionRequired": "مطلوب إذن الكاميرا لمسح النص",
+    "grantCameraPermission": "منح إذن الكاميرا",
+    "galleryPermissionRequired": "مطلوب إذن المعرض لاستيراد الصور",
+    "importFailed": "فشل الاستيراد",
+    "importFailedMessage": "تعذر استيراد الصورة، يرجى المحاولة مرة أخرى",
+    "noNetworkOfflineMode": "لا توجد شبكة · تمكين الترجمة دون اتصال بالإنترنت",
+    "noTextDetectedTitle": "لم يتم اكتشاف أي نص",
+    "noTextDetectedMessage": "لم يتم اكتشاف أي محتوى نصي يمكن التعرف عليه في الصورة.\n\nاقتراحات:\n• تأكد من أن الصورة تحتوي على نص\n• التحقق من وضوح الصورة والإضاءة\n• تجنب الخلفيات الفارغة أو ذات الألوان الصلبة\n• حاول إعادة التقاط الصورة أو ضبط الزاوية",
+    "subscriptionRequiredTitle": "ترجمة الكاميرا تتطلب الاشتراك",
+    "subscriptionRequiredMessage": "تعد الترجمة بالكاميرا ميزة متميزة تتطلب الاشتراك.\n\nمن خلال الاشتراك يمكنك الاستمتاع بما يلي:\n· ترجمات غير محدودة للكاميرا\n· تنزيل حزم اللغات للاستخدام دون اتصال بالإنترنت\n· خالية تماما من الإعلانات",
+    "trialExpiredTitle": "انتهت الفترة التجريبية",
+    "trialExpiredMessage": "لقد انتهت الفترة التجريبية المجانية لمدة 3 أيام.اشترك في Premium لمواصلة استخدام الترجمة بالكاميرا.",
+    "subscribeNow": "اشترك الآن",
+    "later": "لاحقاً"
   },
   "phrases": {
-    "title": "Common Phrases",
-    "phraseList": "Phrase List",
+    "title": "عبارات شائعة",
+    "phraseList": "قائمة العبارات",
     "phraseCount": "{{count}} phrases",
-    "custom": "Custom",
-    "travel": "Travel",
-    "dining": "Dining",
-    "shopping": "Shopping",
-    "emergency": "Emergency",
-    "hotel": "Hotel",
-    "communication": "Communication",
-    "medical": "Medical",
-    "other": "Other",
-    "categoryCreated": "Category created successfully",
-    "categoryDeleted": "Category and all phrases under it have been deleted",
-    "refreshSuccess": "Updated to phrases!",
-    "phraseSaved": "Phrase has been added to category",
-    "addPhrase": "إضافة عبارة",
-    "enterKeyword": "أدخل الكلمة المفتاحية",
-    "translating": "جاري الترجمة...",
-    "fillComplete": "يرجى ملء محتوى العبارة بالكامل",
-    "smartPhrase": "عبارة ذكية",
-    "phrasesSaved": "Phrases have been saved to category",
-    "refreshFailed": "Refresh failed",
-    "pleaseRetry": "Please try again later",
+    "custom": "مخصص",
+    "customCategory": "فئة مخصصة",
+    "travel": "يسافر",
+    "dining": "تناول الطعام",
+    "shopping": "التسوق",
+    "emergency": "طارئ",
+    "hotel": "الفندق",
+    "communication": "تواصل",
+    "medical": "طبي",
+    "other": "آخر",
+    "categoryCreated": "تم إنشاء الفئة بنجاح",
+    "categoryDeleted": "تم حذف الفئة وجميع العبارات الموجودة تحتها",
+    "refreshSuccess": "تم التحديث إلى العبارات!",
+    "phraseSaved": "تمت إضافة العبارة إلى الفئة",
+    "addPhrase": "أضف عبارة",
+    "enterKeyword": "أدخل الكلمة الرئيسية",
+    "translating": "ترجمة...",
+    "fillComplete": "يرجى ملء محتوى العبارة كاملة",
+    "smartPhrase": "العبارة الذكية",
+    "generate": "يولد",
+    "generating": "توليد الذكاء الاصطناعي...",
+    "aiGenerating": "يقوم الذكاء الاصطناعي بإنشاء عبارات ذات صلة، يرجى الانتظار...",
+    "aiWaitTime": "قد يستغرق هذا من 10 إلى 30 ثانية، يرجى التحلي بالصبر",
+    "aiGeneratedNotice": "العبارات الذكية التي تم إنشاؤها بواسطة الذكاء الاصطناعي، يمكنك اختيار حفظها في الفئة",
+    "saveToCategory": "حفظ إلى الفئة",
+    "selectSaveCategory": "حدد حفظ الفئة",
+    "smartPhraseCategory": "فئة العبارة الذكية",
+    "generateTimeout": "مهلة الجيل",
+    "generateTimeoutMessage": "خدمة الذكاء الاصطناعي تستجيب ببطء، يرجى المحاولة مرة أخرى لاحقًا.\n\nاقتراحات:\n• التحقق من اتصال الشبكة\n• حاول مرة أخرى لاحقًا\n• جرّب كلمات رئيسية أبسط",
+    "networkFailed": "فشل الاتصال بالشبكة",
+    "networkFailedMessage": "غير قادر على الاتصال بخدمة AI، يرجى التحقق من إعدادات الشبكة.\n\nيرجى التأكد:\n• الجهاز متصل بالشبكة\n• اتصال الشبكة مستقر\n• جدار الحماية لا يحظر التطبيق",
+    "serviceUnavailable": "الخدمة غير متاحة مؤقتا",
+    "serviceUnavailableMessage": "خدمة AI غير قادرة مؤقتًا على الاستجابة، يرجى المحاولة مرة أخرى لاحقًا.\n\nأنت تستطيع:\n• انتظر بضع دقائق وحاول مرة أخرى\n• التحقق من اتصال الشبكة\n• حاول استخدام كلمات رئيسية أخرى",
+    "generateFailed": "فشل الجيل",
+    "generateFailedMessage": "عذرًا، واجه إنشاء العبارة الذكية مشكلة.\n\nيرجى المحاولة:\n• التحقق من اتصال الشبكة\n• حاول مرة أخرى لاحقًا\n• استخدم كلمات رئيسية أبسط",
+    "noNetwork": "لا توجد شبكة",
+    "smartPhraseNeedsNetwork": "يتطلب إنشاء العبارة الذكية اتصالاً بالشبكة، يرجى التبديل إلى الوضع عبر الإنترنت",
+    "phrasesSaved": "تم حفظ العبارات في الفئة",
+    "refreshFailed": "فشل التحديث",
+    "pleaseRetry": "يرجى المحاولة مرة أخرى في وقت لاحق",
     "travelTitle": "السفر والنقل",
-    "travelDesc": "الاتجاهات، النقل، حجز المقاعد",
+    "travelDesc": "الاتجاهات والنقل وحجز المقاعد",
     "shoppingTitle": "التسوق",
-    "shoppingDesc": "استفسار السعر، طرق الدفع، التجربة والإرجاع",
-    "diningTitle": "الطعام",
-    "diningDesc": "الطلب، التفضيلات الغذائية، معلومات الحساسية",
-    "emergencyTitle": "طوارئ",
-    "emergencyDesc": "طلبات المساعدة، حالات الطوارئ الطبية، الأشياء المفقودة",
-    "hotelTitle": "الإقامة",
+    "shoppingDesc": "الاستفسار عن الأسعار وطرق الدفع والتجربة والإرجاع",
+    "diningTitle": "تناول الطعام",
+    "diningDesc": "الطلب، تفضيلات الطعام، معلومات الحساسية",
+    "emergencyTitle": "طارئ",
+    "emergencyDesc": "طلبات المساعدة، وحالات الطوارئ الطبية، والأشياء المفقودة",
+    "hotelTitle": "إقامة",
     "hotelDesc": "الحجز، مرافق الفندق، خدمة الغرف",
-    "communicationTitle": "التواصل اليومي",
-    "communicationDesc": "التحيات، التعبيرات المهذبة، نصائح المحادثة",
+    "communicationTitle": "تواصل",
+    "communicationDesc": "تحياتي، التعبيرات المهذبة، نصائح المحادثة",
     "medicalTitle": "الطب والصحة",
-    "medicalDesc": "المواعيد الطبية، وصف الأعراض، احتياجات الأدوية"
+    "medicalDesc": "المواعيد، وصف الأعراض، الاحتياجات الدوائية",
+    "enterCategoryName": "الرجاء إدخال اسم الفئة",
+    "cannotDeletePreset": "لا يمكن حذف الفئات المعدة مسبقًا",
+    "enterExpandPhrase": "الرجاء إدخال العبارة للتوسيع",
+    "fillCompletePhraseContent": "يرجى ملء محتوى العبارة كاملة",
+    "noSavableExtendedPhrases": "لا توجد عبارات قابلة للتمديد لحفظها",
+    "selectSourceLanguage": "حدد لغة المصدر",
+    "selectTargetLanguage": "حدد اللغة الهدف",
+    "selectCategory": "حدد الفئة",
+    "createNewCategory": "إنشاء فئة جديدة",
+    "selectIcon": "حدد الرمز:",
+    "categoryNamePlaceholder": "اسم الفئة",
+    "searchLanguage": "لغة البحث...",
+    "pleaseSelectCategory": "الرجاء تحديد فئة",
+    "extendedPhrases": "Extended phrases based on \"{{title}}\""
   },
   "settings": {
-    "title": "Settings",
-    "generalSettings": "General Settings",
-    "generalSettingsSubtitle": "Theme, language, playback and other settings",
-    "languagePacks": "Language Packs",
-    "languagePacksSubtitle": "Download and manage offline translation language packs",
-    "voiceEngine": "Voice Recognition Engine",
-    "voiceEngineSubtitle": "Download and manage offline voice recognition models",
-    "aboutSupport": "About & Support",
-    "aboutApp": "About App",
-    "aboutAppSubtitle": "Version information and development team",
-    "rateApp": "Rate App",
-    "rateAppSubtitle": "Rate us on the app store",
-    "rateAppMessage": "Please rate us on the app store!",
-    "shareApp": "Share App",
-    "shareAppSubtitle": "Recommend the app to friends",
-    "share": "Share",
-    "shareMessage": "Share the app with friends",
-    "supportUs": "Support Us",
-    "supportUsSubtitle": "Your support is our driving force",
-    "supportMessage": "Your support is our driving force!",
-    "performance": "Performance Optimization",
-    "performanceSubtitle": "Clear cache and optimize performance",
-    "optimizationComplete": "Optimization Complete",
-    "optimizationMessage": "Cache cleared and performance optimized",
+    "title": "إعدادات",
+    "generalSettings": "الإعدادات العامة",
+    "generalSettingsSubtitle": "الموضوع واللغة والتشغيل والإعدادات الأخرى",
+    "languagePacks": "حزم اللغات",
+    "languagePacksSubtitle": "قم بتنزيل وإدارة حزم لغات الترجمة دون اتصال بالإنترنت",
+    "aboutSupport": "حول والدعم",
+    "aboutApp": "حول التطبيق",
+    "aboutAppSubtitle": "معلومات الإصدار وفريق التطوير",
+    "rateApp": "معدل التطبيق",
+    "rateAppSubtitle": "قيمنا على متجر التطبيقات",
+    "rateAppMessage": "يرجى تقييمنا في متجر التطبيقات!",
+    "shareApp": "مشاركة التطبيق",
+    "shareAppSubtitle": "يوصي التطبيق للأصدقاء",
+    "share": "يشارك",
+    "shareMessage": "مشاركة التطبيق مع الأصدقاء",
+    "supportUs": "ادعمنا",
+    "supportUsSubtitle": "دعمكم هو القوة الدافعة لنا",
+    "supportMessage": "دعمكم هو القوة الدافعة لدينا!",
+    "performance": "تحسين الأداء",
+    "performanceSubtitle": "مسح ذاكرة التخزين المؤقت وتحسين الأداء",
+    "optimizationComplete": "اكتمل التحسين",
+    "optimizationMessage": "تم مسح ذاكرة التخزين المؤقت وتحسين الأداء",
     "appVersion": "Voice Translator v1.0.0",
-    "appSlogan": "Communication without boundaries",
-    "thankYou": "Thank you for your support",
-    "theme": "Theme Mode",
-    "language": "App Language",
-    "selectTheme": "Please select your preferred theme mode",
-    "lightMode": "Light Mode",
-    "darkMode": "Dark Mode",
-    "followSystem": "Follow System",
-    "current": "Current",
-    "languageChanged": "Language Changed",
-    "appLanguageSetTo": "App language set to",
-    "playbackSettings": "Playback Settings",
-    "autoPlay": "Auto Play",
-    "voiceTranslation": "Voice Translation",
-    "textTranslation": "Text Translation",
-    "voiceAndTextTranslation": "Voice + Text Translation",
-    "disabled": "Disabled",
-    "voiceType": "Voice Type",
-    "male": "Male",
-    "female": "Female",
-    "selectAppLanguage": "Select App Language",
-    "selectAppInterfaceLanguage": "Select app interface display language",
-    "aboutDescription": "Voice Translator v1.0.0\n\nA simple and easy-to-use multilingual voice translation app that supports real-time translation between Chinese, English, Japanese and Korean.\n\n© 2025 Voice Translator"
+    "appSlogan": "التواصل بلا حدود",
+    "thankYou": "شكرا لدعمكم",
+    "theme": "وضع الموضوع",
+    "language": "لغة التطبيق",
+    "selectTheme": "يرجى تحديد وضع السمة المفضل لديك",
+    "lightMode": "وضع الضوء",
+    "darkMode": "الوضع المظلم",
+    "lightModeDesc": "واجهة مشرقة ونظيفة",
+    "darkModeDesc": "واجهة مظلمة صديقة للعين",
+    "followSystem": "اتبع النظام",
+    "current": "حاضِر",
+    "languageChanged": "تم تغيير اللغة",
+    "appLanguageSetTo": "تم ضبط لغة التطبيق على",
+    "playbackSettings": "إعدادات التشغيل",
+    "autoPlay": "اللعب التلقائي",
+    "voiceTranslation": "الترجمة الصوتية",
+    "textTranslation": "ترجمة النصوص",
+    "voiceAndTextTranslation": "ترجمة صوتية + نصية",
+    "disabled": "عاجز",
+    "voiceType": "نوع الصوت",
+    "male": "ذكر",
+    "female": "أنثى",
+    "selectAppLanguage": "حدد لغة التطبيق",
+    "selectAppInterfaceLanguage": "حدد لغة عرض واجهة التطبيق",
+    "aboutDescription": "Voice Translator v1.0.0\n\nA simple and easy-to-use multilingual voice translation app that supports real-time translation between Chinese, English, Japanese and Korean.\n\n© 2025 Voice Translator",
+    "selectYourLanguage": "اختر لغتك",
+    "premiumSubscription": "اشتراك بريميوم",
+    "unlockAllFeatures": "فتح ترجمات غير محدودة وحزم غير متصلة بالإنترنت"
   },
   "errors": {
-    "networkError": "Network error, please try again",
-    "translationError": "Translation failed, please check network connection or try again later",
-    "speechError": "Speech recognition failed, please check network connection or try again later",
-    "ttsError": "Voice playback failed, please try again later",
-    "apiKeyMissing": "Translation service configuration error: missing API key",
-    "ocrError": "OCR service configuration error: missing API key",
-    "translationServiceUnavailable": "Translation service temporarily unavailable, please try again later",
-    "playbackFailed": "Unable to play audio"
+    "networkError": "خطأ في الشبكة، يرجى المحاولة مرة أخرى",
+    "translationError": "فشلت الترجمة، يرجى التحقق من اتصال الشبكة أو المحاولة مرة أخرى لاحقًا",
+    "speechError": "فشل التعرف على الكلام، يرجى التحقق من اتصال الشبكة أو المحاولة مرة أخرى لاحقًا",
+    "ttsError": "فشل تشغيل الصوت، يرجى المحاولة مرة أخرى لاحقًا",
+    "apiKeyMissing": "خطأ في تكوين خدمة الترجمة: مفتاح API مفقود",
+    "ocrError": "خطأ في تكوين خدمة التعرف الضوئي على الحروف: مفتاح API مفقود",
+    "translationServiceUnavailable": "خدمة الترجمة غير متاحة مؤقتًا، يرجى المحاولة مرة أخرى لاحقًا",
+    "playbackFailed": "غير قادر على تشغيل الصوت"
   },
   "autoPlay": {
-    "title": "Auto-Play Settings",
-    "infoTitle": "Auto-Play Information",
-    "infoMessage": "• Auto-play voice translation: Automatically plays translation result after voice translation\n• Auto-play text translation: Automatically reads translation result after text translation\n• Both features can be enabled or disabled independently",
-    "voiceTitle": "Auto-Play Voice Translation",
-    "voiceDescription": "Automatically plays translation result after voice translation",
-    "textTitle": "Auto-Play Text Translation",
-    "textDescription": "Automatically reads translation result after text translation",
-    "currentStatus": "Current Status",
-    "statusBoth": "Will play voice and text translation results",
-    "statusVoiceOnly": "Will play voice translation results",
-    "statusTextOnly": "Will read text translation results",
-    "statusOff": "Auto-play is disabled"
+    "title": "إعدادات التشغيل التلقائي",
+    "infoTitle": "معلومات التشغيل التلقائي",
+    "infoMessage": "• التشغيل التلقائي للترجمة الصوتية: تشغيل نتيجة الترجمة تلقائيًا بعد الترجمة الصوتية\n• التشغيل التلقائي لترجمة النص: يقرأ نتيجة الترجمة تلقائيًا بعد ترجمة النص\n• يمكن تمكين كلا الميزتين أو تعطيلهما بشكل مستقل",
+    "voiceTitle": "التشغيل التلقائي للترجمة الصوتية",
+    "voiceDescription": "تشغيل نتيجة الترجمة تلقائيًا بعد الترجمة الصوتية",
+    "textTitle": "التشغيل التلقائي لترجمة النص",
+    "textDescription": "يقرأ نتيجة الترجمة تلقائيًا بعد ترجمة النص",
+    "currentStatus": "الوضع الحالي",
+    "statusBoth": "سيتم تشغيل نتائج الترجمة الصوتية والنصية",
+    "statusVoiceOnly": "سيتم تشغيل نتائج الترجمة الصوتية",
+    "statusTextOnly": "سيتم قراءة نتائج ترجمة النص",
+    "statusOff": "تم تعطيل التشغيل التلقائي"
   },
   "languagePacks": {
-    "title": "Language Pack Manager",
-    "storageUsed": "Storage Used",
-    "downloadedCount": "Downloaded",
-    "packs": "packs",
-    "downloaded": "Downloaded",
-    "notDownloaded": "Not Downloaded",
-    "download": "Download",
-    "delete": "Delete"
+    "title": "مدير حزمة اللغة",
+    "storageUsed": "التخزين المستخدمة",
+    "downloadedCount": "تم التنزيل",
+    "packs": "حزم",
+    "downloaded": "تم التنزيل",
+    "notDownloaded": "لم يتم تنزيله",
+    "download": "تحميل",
+    "delete": "يمسح",
+    "locked": "مغلق",
+    "lockHint": "الاشتراك مطلوب",
+    "downloadLockedTitle": "الاشتراك مطلوب",
+    "downloadLockedMessage": "يتطلب تنزيل حزم اللغات اشتراكًا مميزًا.اشترك لتنزيل جميع حزم اللغات واستمتع بالترجمة دون الاتصال بالإنترنت.",
+    "usageLockedTitle": "حزمة اللغة مقفلة",
+    "usageLockedMessage": "تتطلب حزمة اللغة هذه اشتراكًا مميزًا لاستخدامها.اشترك لفتح جميع حزم اللغات التي تم تنزيلها على الفور."
   },
-  "vosk": {
-    "modelDownloadSuccess": "Model downloaded and initialized successfully!",
-    "modelDownloadFailed": "Model download failed, please check network connection",
-    "downloadError": "Error occurred while downloading model",
-    "confirmDelete": "Are you sure you want to delete this model? You will need to download it again to use offline voice recognition for this language.",
-    "deleteNotImplemented": "Delete function not implemented yet",
-    "deleteFailed": "Failed to delete model",
-    "downloading": "Downloading",
-    "activateRecognition": "Activate Voice Recognition",
-    "downloadAndActivate": "Download and Activate",
-    "deleteModel": "Delete Model",
-    "downloadedModels": "Downloaded Models",
-    "count": "models",
-    "recognitionActivated": "✅ Voice recognition activated",
-    "recognitionNotActivated": "⚠️ Voice recognition not activated",
-    "recognizerStatus": "Recognizer Status",
-    "initialized": "Initialized",
-    "notInitialized": "Not Initialized",
-    "availableModels": "Available Voice Recognition Models",
-    "usageInstructions": "💡 Usage Instructions",
-    "recommendMultilang": "Recommended: Download 'Multilingual Model' to support 12 common languages",
-    "specificLanguage": "For specific languages, download the corresponding dedicated model",
-    "activateAfterDownload": "Models need to be activated after download to use",
-    "multipleModels": "You can download multiple models and switch between them as needed",
-    "currentStatus": "Current Status",
-    "voiceRecognitionEngine": "Voice Recognition Engine",
-    "supportedLanguages": "Supported Languages",
-    "size": "Size",
-    "multilangSupport": "Offline voice recognition supporting multiple languages",
-    "dedicatedModel": "Dedicated offline voice recognition model"
+  "trial": {
+    "daysRemaining": "{{days}} days trial left",
+    "oneDayRemaining": "1 day {{hours}} hours trial left",
+    "hoursRemaining": "{{hours}} hours trial left",
+    "minutesRemaining": "{{minutes}} minutes trial left",
+    "urgentMessage": "اشترك لمواصلة استخدام ترجمة الكاميرا والحزم غير المتصلة بالإنترنت",
+    "normalMessage": "استمتع بجميع الميزات خلال الفترة التجريبية",
+    "cardTitle": "تجربة مجانية",
+    "subscribeButton": "اشترك الآن"
+  },
+  "subscription": {
+    "title": "اشترك في بريميوم",
+    "monthly": "شهريا",
+    "yearly": "سنوي",
+    "save10": "وفر 10%",
+    "perMonth": "كل شهر",
+    "perYear": "كل سنة",
+    "subscribe": "اشترك الآن",
+    "restore": "استعادة الشراء",
+    "manage": "إدارة الاشتراك",
+    "loading": "جارٍ تحميل خيارات الاشتراك...",
+    "loadFailed": "غير قادر على تحميل خيارات الاشتراك، يرجى المحاولة مرة أخرى في وقت لاحق",
+    "startUsing": "ابدأ",
+    "upgradeTitle": "الترقية إلى بريميوم",
+    "upgradeSubtitle": "افتح جميع الميزات واستمتع بترجمة غير محدودة",
+    "trialRemaining": "{{days}} days trial remaining",
+    "feature1": "✅ ترجمات غير محدودة",
+    "feature2": "✅ قم بتنزيل جميع حزم اللغات",
+    "feature3": "✅ ترجمة دون اتصال بالإنترنت (النص والكاميرا)",
+    "feature4": "✅ خالية تماما من الإعلانات",
+    "autoRenew": "نسخة تجريبية مجانية لمدة 3 أيام، ثم يتم تجديدها تلقائيًا.إلغاء في أي وقت.",
+    "limitReached": "تم الوصول إلى حد الاستخدام",
+    "limitMessage": "تم استخدام الترجمات المجانية اليومية (5/يوم)\n\nاشترك في Premium للحصول على ترجمات غير محدودة!",
+    "viewPlans": "عرض الخطط",
+    "cancelTitle": "كيفية إلغاء الاشتراك؟",
+    "cancelAndroid": "انتقل إلى Google Play → المدفوعات والاشتراكات → الاشتراكات → حدد هذا التطبيق → إلغاء الاشتراك",
+    "cancelIOS": "انتقل إلى الإعدادات → معرف Apple → الاشتراكات → حدد هذا التطبيق → إلغاء الاشتراك",
+    "cancelNote": "⚠️ بعد الإلغاء، سيتم تخفيض تصنيفك إلى المستوى المجاني (5 ترجمات/يوم + إعلانات)",
+    "freeTier": "الطبقة الحرة",
+    "trialActive": "النسخة التجريبية نشطة",
+    "premiumActive": "عضو مميز"
+  },
+  "tts": {
+    "alertTitle": "إشعار تشغيل الصوت",
+    "missingVoicePack": "Your device is missing {{language}} voice pack",
+    "divider": "━━━━━━━━━━━━━━━━━━━",
+    "whatIsTTS": "ما هو TTS (تحويل النص إلى كلام)؟",
+    "ttsDescription": "يمكن لتحويل النص إلى كلام (TTS) قراءة نتائج الترجمة بصوت عالٍ لمساعدتك:",
+    "benefit1": "• تعلم النطق الصحيح",
+    "benefit2": "• فهم محتوى الترجمة",
+    "benefit3": "• الاستماع بدون استخدام اليدين",
+    "howToDownload": "How to download {{language}} voice pack?",
+    "samsungInstructions": "[أجهزة سامسونج]",
+    "samsungStep1": "1. افتح \"الإعدادات\" → ابحث عن \"تحويل النص إلى كلام\"",
+    "samsungStep2": "2. اضغط على \"تحويل النص إلى كلام\"",
+    "samsungStep3": "3. حدد「محرك تحويل النص إلى كلام من Google」",
+    "samsungStep4": "4. اضغط على 「⚙ الإعدادات」 → 「تثبيت البيانات الصوتية」",
+    "samsungStep5": "5. Find and download「{{language}}」",
+    "otherInstructions": "【أجهزة أخرى】",
+    "otherSteps": "الإعدادات ← إمكانية الوصول ← تحويل النص إلى كلام ← البيانات الصوتية",
+    "currentSolution": "الحل الحالي:",
+    "fallbackMessage": "استخدام تشغيل اللغة الإنجليزية مؤقتًا للتأكد من إمكانية سماع الصوت.",
+    "afterDownload": "After downloading, it will automatically use {{language}} playback.",
+    "openSettings": "افتح الإعدادات",
+    "gotIt": "فهمتها"
+  },
+  "notFound": {
+    "title": "أُووبس!",
+    "message": "هذه الشاشة غير موجودة.",
+    "goHome": "انتقل إلى الشاشة الرئيسية!"
   }
 }

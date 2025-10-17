@@ -12,261 +12,300 @@ export default function TermsOfService() {
       <div style={styles.container}>
         <div style={styles.content}>
           <h1 style={styles.title}>Terms of Service</h1>
-          <p style={styles.subtitle}>使用条款</p>
-          <p style={styles.date}><strong>Effective Date | 生效日期:</strong> October 16, 2025</p>
-          <p style={styles.date}><strong>Developer | 开发者:</strong> HL Yong</p>
+          <p style={styles.subtitle}>Speak to Translator</p>
+          <p style={styles.date}><strong>Effective Date:</strong> October 16, 2025</p>
+          <p style={styles.date}><strong>Last Updated:</strong> October 16, 2025</p>
 
           <hr style={styles.divider} />
 
           <section style={styles.section}>
-            <h2 style={styles.heading}>一、接受条款 | Acceptance of Terms</h2>
+            <h2 style={styles.heading}>1. Acceptance of Terms</h2>
             <p style={styles.paragraph}>
-              欢迎使用 <strong>Speak to Translator</strong>（以下简称"本应用"）。
-              通过下载、安装或使用本应用，您同意遵守本使用条款。
-              如果您不同意这些条款，请不要使用本应用。
+              By downloading, installing, accessing, or using the Speak to Translator mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.
             </p>
             <p style={styles.paragraph}>
-              <em>By accessing or using Speak to Translator, you agree to be bound by these Terms of Service.
-              If you do not agree, please do not use the App.</em>
+              These Terms constitute a legally binding agreement between you and the developer, HL Yong ("we," "us," or "our"). Your use of the App constitutes acceptance of these Terms.
             </p>
           </section>
 
           <section style={styles.section}>
-            <h2 style={styles.heading}>二、服务描述 | Service Description</h2>
-            <p style={styles.paragraph}>本应用提供以下功能：</p>
+            <h2 style={styles.heading}>2. Description of Service</h2>
+            <p style={styles.paragraph}>
+              Speak to Translator is a multilingual translation application that provides the following services:
+            </p>
             <ul style={styles.list}>
-              <li><strong>语音翻译</strong>：支持 84 种语言的实时语音识别与翻译</li>
-              <li><strong>文本翻译</strong>：输入文本即可翻译</li>
-              <li><strong>常用短语</strong>：预设 100+ 常用短语，支持自定义</li>
-              <li><strong>AI 短语扩展</strong>：基于 AI 生成相关短语建议</li>
-              <li><strong>离线语言包</strong>：订阅用户可下载离线翻译包</li>
-              <li><strong>翻译历史</strong>：本地保存翻译记录</li>
+              <li><strong>Voice Translation:</strong> Real-time speech-to-text translation using advanced AI technology</li>
+              <li><strong>Text Translation:</strong> Instant text translation between multiple languages</li>
+              <li><strong>Camera Translation:</strong> Optical Character Recognition (OCR) and translation of text in images</li>
+              <li><strong>Offline Translation:</strong> Downloadable language packs for offline use</li>
+              <li><strong>AI Phrase Expansion:</strong> Intelligent generation of related phrases and expressions</li>
             </ul>
             <p style={styles.paragraph}>
-              我们保留随时修改、暂停或终止服务的权利，恕不另行通知。
+              The App supports over 80 languages and is designed to facilitate communication across language barriers.
             </p>
           </section>
 
           <section style={styles.section}>
-            <h2 style={styles.heading}>三、用户责任 | User Responsibilities</h2>
-            <p style={styles.paragraph}>您同意：</p>
-            <ul style={styles.list}>
-              <li>仅将本应用用于合法目的；</li>
-              <li>不利用本应用从事任何非法、有害或侵犯他人权利的活动；</li>
-              <li>不尝试破解、反编译或干扰本应用的正常运行；</li>
-              <li>不滥用翻译服务（如大量自动化请求）。</li>
-            </ul>
+            <h2 style={styles.heading}>3. User Eligibility</h2>
             <p style={styles.paragraph}>
-              违反上述规定可能导致您的访问权限被终止。
+              You must be at least 13 years old to use this App. If you are under 18, you must have parental or guardian consent to use the App. By using the App, you represent and warrant that you meet these age requirements.
             </p>
           </section>
 
           <section style={styles.section}>
-            <h2 style={styles.heading}>四、订阅与付费 | Subscription & Payment</h2>
+            <h2 style={styles.heading}>4. User Responsibilities</h2>
+            <p style={styles.paragraph}>
+              You agree to use the App responsibly and in accordance with applicable laws and regulations. You will not:
+            </p>
+            <ul style={styles.list}>
+              <li>Use the App for any illegal, unauthorized, or prohibited purpose</li>
+              <li>Attempt to reverse engineer, decompile, disassemble, or hack the App</li>
+              <li>Use the App to transmit harmful, malicious, or inappropriate content</li>
+              <li>Violate any applicable laws, regulations, or third-party rights</li>
+              <li>Interfere with or disrupt the App's functionality or security</li>
+              <li>Create multiple accounts to circumvent usage limitations</li>
+              <li>Use automated systems or bots to access the App</li>
+            </ul>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>5. Subscription and Payment Terms</h2>
             
-            <h3 style={styles.subheading}>4.1 订阅模式</h3>
-            <p style={styles.paragraph}>本应用提供以下订阅选项：</p>
-            <ul style={styles.list}>
-              <li><strong>免费版本</strong>：基础翻译功能（每日限额）</li>
-              <li><strong>Premium 月度订阅</strong>：解锁所有高级功能</li>
-              <li><strong>Premium 年度订阅</strong>：解锁所有高级功能，享受折扣优惠</li>
-            </ul>
-
-            <h3 style={styles.subheading}>4.2 定价</h3>
+            <h3 style={styles.subheading}>5.1 Free Version</h3>
             <p style={styles.paragraph}>
-              订阅价格因您所在的国家/地区而异，并以当地货币显示。
-              实际价格可在应用内订阅页面查看。
-            </p>
-            <p style={styles.paragraph}>
-              所有付款通过 <strong>Apple App Store</strong> 或 <strong>Google Play Store</strong> 处理，
-              我们不直接处理或存储您的支付信息。
-            </p>
-
-            <h3 style={styles.subheading}>4.3 免费试用</h3>
-            <p style={styles.paragraph}>
-              新用户可享受 <strong>3 天免费试用</strong>（如适用）。
-              试用期结束前可随时取消，不会产生费用。
-              如未取消，试用结束后将自动转为付费订阅。
-            </p>
-
-            <h3 style={styles.subheading}>4.4 自动续订</h3>
-            <p style={styles.paragraph}>
-              订阅为自动续订模式。除非您在当前订阅期结束前至少 24 小时取消，
-              否则订阅将自动续订并收取费用。
-            </p>
-
-            <h3 style={styles.subheading}>4.5 取消与退款</h3>
-            <ul style={styles.list}>
-              <li>您可以随时在 App Store 或 Google Play 设置中取消订阅；</li>
-              <li>取消后，您可以继续使用至当前订阅期结束；</li>
-              <li>退款政策由 Apple 或 Google 控制，请联系相应平台。</li>
-            </ul>
-          </section>
-
-          <section style={styles.section}>
-            <h2 style={styles.heading}>五、知识产权 | Intellectual Property</h2>
-            <p style={styles.paragraph}>
-              本应用的所有内容、功能、设计、代码及商标均属于 HL Yong 或其授权方所有。
-              未经书面许可，您不得复制、修改、分发或商业使用本应用的任何部分。
-            </p>
-          </section>
-
-          <section style={styles.section}>
-            <h2 style={styles.heading}>六、免责声明 | Disclaimer</h2>
-            <p style={styles.paragraph}>
-              本应用按"现状"提供，不提供任何明示或暗示的保证，包括但不限于：
+              The App offers a free version with limited features:
             </p>
             <ul style={styles.list}>
-              <li>翻译结果的准确性、完整性或适用性；</li>
-              <li>服务的持续可用性或无错误运行；</li>
-              <li>第三方 API（OpenAI、Google）的服务质量。</li>
+              <li>Limited number of translations per day</li>
+              <li>Display of advertisements</li>
+              <li>Basic translation features</li>
             </ul>
-            <p style={styles.paragraph}>
-              <strong>重要提示：</strong>本应用的翻译结果仅供参考，不应用于法律、医疗或其他关键场景。
-              对于因使用翻译结果而产生的任何损失，我们不承担责任。
-            </p>
-          </section>
 
-          <section style={styles.section}>
-            <h2 style={styles.heading}>七、责任限制 | Limitation of Liability</h2>
+            <h3 style={styles.subheading}>5.2 Premium Subscription</h3>
             <p style={styles.paragraph}>
-              在法律允许的最大范围内，HL Yong 及其关联方不对以下情况承担责任：
+              Premium subscription provides enhanced features:
             </p>
             <ul style={styles.list}>
-              <li>因使用或无法使用本应用而导致的任何直接、间接、偶然或后果性损失；</li>
-              <li>因第三方服务中断或数据丢失造成的损失；</li>
-              <li>因用户设备、网络或操作系统问题导致的服务中断。</li>
+              <li>Unlimited translations</li>
+              <li>Ad-free experience</li>
+              <li>Access to all premium features</li>
+              <li>Priority customer support</li>
             </ul>
-          </section>
 
-          <section style={styles.section}>
-            <h2 style={styles.heading}>八、修改与终止 | Modifications & Termination</h2>
+            <h3 style={styles.subheading}>5.3 Trial Period</h3>
             <p style={styles.paragraph}>
-              我们保留随时修改或终止本应用（全部或部分功能）的权利，无需提前通知。
-              我们也可以终止或暂停您的访问权限，如果我们认为您违反了本条款。
+              New users receive a 3-day free trial of premium features. After the trial period, you will be charged the subscription fee unless you cancel before the trial ends.
             </p>
-          </section>
 
-          <section style={styles.section}>
-            <h2 style={styles.heading}>九、适用法律 | Governing Law</h2>
+            <h3 style={styles.subheading}>5.4 Payment and Billing</h3>
             <p style={styles.paragraph}>
-              本条款受您所在国家/地区的法律管辖。
-              任何争议应首先通过友好协商解决。
+              Subscription fees are charged through your app store account (Google Play Store or Apple App Store). All sales are final unless required by applicable law. Subscription fees are non-refundable except as required by law.
             </p>
           </section>
 
           <section style={styles.section}>
-            <h2 style={styles.heading}>十、联系我们 | Contact Us</h2>
+            <h2 style={styles.heading}>6. Privacy and Data Protection</h2>
             <p style={styles.paragraph}>
-              如果您对本使用条款有任何疑问，请通过以下方式联系我们：
+              Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our Privacy Policy to understand our data practices.
             </p>
-            <p style={styles.contact}>📧 <a href="mailto:hlappsinfo@gmail.com" style={styles.link}>hlappsinfo@gmail.com</a></p>
           </section>
 
-          <footer style={styles.footer}>
-            <p>© 2025 HL Yong. All rights reserved.</p>
-            <p>These Terms of Service apply to all versions of Speak to Translator.</p>
-            <p style={{ marginTop: '20px' }}>
-              <a href="/privacy" style={styles.link}>Privacy Policy</a> | 
-              <a href="/terms" style={styles.link}> Terms of Service</a>
+          <section style={styles.section}>
+            <h2 style={styles.heading}>7. Third-Party Services</h2>
+            <p style={styles.paragraph}>
+              The App integrates with third-party services to provide translation functionality:
             </p>
-          </footer>
+            <ul style={styles.list}>
+              <li><strong>Google Cloud Translation API:</strong> For text translation services</li>
+              <li><strong>Google Cloud Vision API:</strong> For image text recognition</li>
+              <li><strong>OpenAI Whisper API:</strong> For speech recognition</li>
+              <li><strong>Google ML Kit:</strong> For on-device text recognition</li>
+            </ul>
+            <p style={styles.paragraph}>
+              These third-party services are subject to their own terms of service and privacy policies. We are not responsible for the availability, accuracy, or content of these third-party services.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>8. Intellectual Property Rights</h2>
+            <p style={styles.paragraph}>
+              The App and its original content, features, and functionality are owned by HL Yong and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+            </p>
+            <p style={styles.paragraph}>
+              You may not copy, modify, distribute, sell, or lease any part of our services or included software, nor may you reverse engineer or attempt to extract the source code of that software.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>9. Disclaimers and Limitations</h2>
+            
+            <h3 style={styles.subheading}>9.1 Service Availability</h3>
+            <p style={styles.paragraph}>
+              We strive to provide continuous service availability, but we do not guarantee that the App will be available at all times. The App may be temporarily unavailable due to maintenance, updates, or technical issues.
+            </p>
+
+            <h3 style={styles.subheading}>9.2 Translation Accuracy</h3>
+            <p style={styles.paragraph}>
+              While we strive to provide accurate translations, we cannot guarantee the accuracy, completeness, or reliability of any translation. Translations are provided for informational purposes only and should not be relied upon for critical decisions.
+            </p>
+
+            <h3 style={styles.subheading}>9.3 Warranty Disclaimer</h3>
+            <p style={styles.paragraph}>
+              THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>10. Limitation of Liability</h2>
+            <p style={styles.paragraph}>
+              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL HL YONG BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE APP.
+            </p>
+            <p style={styles.paragraph}>
+              Our total liability to you for any damages arising from or related to these Terms or the App shall not exceed the amount you paid us for the App in the 12 months preceding the claim.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>11. Indemnification</h2>
+            <p style={styles.paragraph}>
+              You agree to defend, indemnify, and hold harmless HL Yong from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including attorney's fees) resulting from or arising out of your use of the App or violation of these Terms.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>12. Termination</h2>
+            <p style={styles.paragraph}>
+              We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+            </p>
+            <p style={styles.paragraph}>
+              Upon termination, your right to use the App will cease immediately. All provisions of the Terms which by their nature should survive termination shall survive termination.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>13. Governing Law and Dispute Resolution</h2>
+            <p style={styles.paragraph}>
+              These Terms shall be interpreted and governed by the laws of the jurisdiction where the developer resides, without regard to its conflict of law provisions.
+            </p>
+            <p style={styles.paragraph}>
+              Any disputes arising from these Terms or your use of the App shall be resolved through binding arbitration in accordance with the rules of the relevant arbitration association.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>14. Changes to Terms</h2>
+            <p style={styles.paragraph}>
+              We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
+            </p>
+            <p style={styles.paragraph}>
+              Your continued use of the App after any changes to these Terms constitutes acceptance of those changes.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>15. Severability</h2>
+            <p style={styles.paragraph}>
+              If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.
+            </p>
+          </section>
+
+          <section style={styles.section}>
+            <h2 style={styles.heading}>16. Contact Information</h2>
+            <p style={styles.paragraph}>
+              If you have any questions about these Terms of Service, please contact us:
+            </p>
+            <p style={styles.paragraph}>
+              <strong>Email:</strong> hlappsinfo@gmail.com<br />
+              <strong>Developer:</strong> HL Yong
+            </p>
+          </section>
+
+          <hr style={styles.divider} />
+          <p style={styles.footer}>
+            These Terms of Service are effective as of October 16, 2025.
+          </p>
         </div>
       </div>
     </>
   );
 }
 
-const styles: { [key: string]: React.CSSProperties } = {
+const styles = {
   container: {
     minHeight: '100vh',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f8f9fa',
     padding: '20px',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
   },
   content: {
     maxWidth: '800px',
     margin: '0 auto',
     backgroundColor: 'white',
     padding: '40px',
-    borderRadius: '8px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    borderRadius: '12px',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
   },
   title: {
-    fontSize: '32px',
-    fontWeight: 'bold',
+    fontSize: '36px',
+    fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    textAlign: 'center',
+    textAlign: 'center' as const,
   },
   subtitle: {
-    fontSize: '24px',
+    fontSize: '18px',
     color: '#666',
     marginBottom: '20px',
-    textAlign: 'center',
+    textAlign: 'center' as const,
+    fontWeight: '500',
   },
   date: {
     fontSize: '14px',
-    color: '#666',
-    marginBottom: '10px',
-    textAlign: 'center',
+    color: '#888',
+    marginBottom: '4px',
+    textAlign: 'center' as const,
   },
   divider: {
     border: 'none',
-    borderTop: '2px solid #e0e0e0',
-    margin: '30px 0',
+    borderTop: '2px solid #e9ecef',
+    margin: '40px 0',
   },
   section: {
-    marginBottom: '30px',
+    marginBottom: '32px',
   },
   heading: {
     fontSize: '24px',
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: '#1a1a1a',
     marginBottom: '16px',
-    borderLeft: '4px solid #2196F3',
-    paddingLeft: '12px',
+    borderBottom: '2px solid #007AFF',
+    paddingBottom: '8px',
   },
   subheading: {
     fontSize: '18px',
     fontWeight: '600',
     color: '#333',
-    marginTop: '20px',
+    marginTop: '24px',
     marginBottom: '12px',
   },
   paragraph: {
     fontSize: '16px',
-    lineHeight: '1.6',
-    color: '#333',
-    marginBottom: '12px',
+    lineHeight: '1.7',
+    color: '#444',
+    marginBottom: '16px',
   },
   list: {
     fontSize: '16px',
-    lineHeight: '1.8',
-    color: '#333',
-    marginLeft: '20px',
-    marginBottom: '12px',
-  },
-  link: {
-    color: '#2196F3',
-    textDecoration: 'none',
-    borderBottom: '1px solid #2196F3',
-    margin: '0 8px',
-  },
-  contact: {
-    fontSize: '18px',
-    fontWeight: '500',
-    color: '#1a1a1a',
-    textAlign: 'center',
-    marginTop: '20px',
+    lineHeight: '1.7',
+    color: '#444',
+    marginLeft: '24px',
+    marginBottom: '16px',
   },
   footer: {
-    marginTop: '50px',
-    paddingTop: '20px',
-    borderTop: '1px solid #e0e0e0',
-    textAlign: 'center',
     fontSize: '14px',
-    color: '#999',
+    color: '#888',
+    textAlign: 'center' as const,
+    marginTop: '32px',
+    fontStyle: 'italic',
   },
 };
-
